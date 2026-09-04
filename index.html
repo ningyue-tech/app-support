@@ -17,7 +17,7 @@
                    Roboto, Helvetica, Arial, sans-serif;
       background: #f5f5f7;
       color: #1d1d1f;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .container {
@@ -69,12 +69,13 @@
     }
 
     h3 {
-      margin-top: 24px;
-      margin-bottom: 10px;
+      margin-top: 26px;
+      margin-bottom: 14px;
       font-size: 18px;
     }
 
     p {
+      margin-top: 0;
       margin-bottom: 12px;
     }
 
@@ -83,6 +84,7 @@
       padding: 18px;
       border-radius: 12px;
       margin-top: 18px;
+      line-height: 1.8;
     }
 
     .question {
@@ -93,7 +95,7 @@
     .answer {
       color: #6e6e73;
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     a {
@@ -111,236 +113,309 @@
       font-size: 14px;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 36px 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="header">
+  <div class="header">
 
-      <div class="icon">🎮</div>
+    <div class="icon">🎮</div>
 
-      <h1>App Support</h1>
+    <h1>App Support</h1>
 
-      <div class="subtitle">
-        Support for our iPhone and Apple Watch apps
-      </div>
-
+    <div class="subtitle">
+      Brain Teasers & Bean Break Master
     </div>
-
-
-    <div class="card">
-
-      <h2>Supported Apps</h2>
-
-      <p>
-        Welcome to the official support page for applications developed
-        by Nanjing Ningyue Network Technology Co., Ltd.
-      </p>
-
-      <div class="app-list">
-
-        <strong>Brain Teasers</strong><br>
-        脑静急转弯-手表益智问答
-        Brain Teasers - Apple Watch Trivia & Brain Challenge
-        <br><br>
-
-        <strong>Bean Break Master</strong><br>
-        拆豆大师-手表游戏
-
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Technical Support</h2>
-
-      <p>
-        If you experience any problems while using our apps,
-        please contact us. We will be happy to assist you.
-      </p>
-
-      <p>
-        Our applications are designed for iPhone and Apple Watch
-        and provide lightweight entertainment, puzzle, and casual game experiences.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Brain Teasers</h2>
-
-      <p>
-        Brain Teasers is a trivia and puzzle application designed
-        to provide quick and entertaining brain challenges,
-        especially for Apple Watch users.
-      </p>
-
-      <h3>Frequently Asked Questions</h3>
-
-
-      <p class="question">
-        How do I start a quiz?
-      </p>
-
-      <p class="answer">
-        Open Brain Teasers on your Apple Watch and select the start option
-        to begin answering questions.
-      </p>
-
-
-      <p class="question">
-        How is my score calculated?
-      </p>
-
-      <p class="answer">
-        Your score is based on your answers and progress within the quiz.
-      </p>
-
-
-      <p class="question">
-        Does Brain Teasers require an Internet connection?
-      </p>
-
-      <p class="answer">
-        The main quiz features can work locally on your device.
-        Some system-related features may depend on your device configuration.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Bean Break Master</h2>
-
-      <p>
-        Bean Break Master is a casual puzzle game for iPhone and Apple Watch.
-        Players complete bean-breaking puzzle challenges and progress through
-        different levels.
-      </p>
-
-      <h3>Frequently Asked Questions</h3>
-
-
-      <p class="question">
-        How do I start the game?
-      </p>
-
-      <p class="answer">
-        Open Bean Break Master on your iPhone or Apple Watch
-        and tap the start button to enter the game.
-      </p>
-
-
-      <p class="question">
-        How do I progress through levels?
-      </p>
-
-      <p class="answer">
-        Complete the objective of the current puzzle to unlock or continue
-        to the next level.
-      </p>
-
-
-      <p class="question">
-        Is my game progress stored online?
-      </p>
-
-      <p class="answer">
-        Current game progress is primarily stored locally on your device.
-      </p>
-
-
-      <p class="question">
-        Does Bean Break Master require an Internet connection?
-      </p>
-
-      <p class="answer">
-        The main gameplay does not require a continuous Internet connection.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Troubleshooting</h2>
-
-      <p class="question">
-        What should I do if an app is not working correctly?
-      </p>
-
-      <p class="answer">
-        Please make sure your iPhone and Apple Watch are running supported
-        system versions. Try closing and reopening the app, or restarting
-        your device. If the problem continues, please contact us.
-      </p>
-
-
-      <p class="question">
-        The Apple Watch app does not open correctly. What should I do?
-      </p>
-
-      <p class="answer">
-        Make sure your Apple Watch is properly paired with your iPhone,
-        the application is installed on the watch, and both devices
-        are running supported system versions.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Contact Us</h2>
-
-      <p>
-        If you have questions, feedback, suggestions, or technical issues,
-        please contact our support team.
-      </p>
-
-      <p>
-        Email:
-        <a href="mailto:shaojie@ningyue.xyz">
-          shaojie@ningyue.xyz
-        </a>
-      </p>
-
-      <p>
-        Please include the app name and a short description of the issue
-        so that we can assist you more efficiently.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h2>Developer</h2>
-
-      <p>
-        Nanjing Ningyue Network Technology Co., Ltd.
-      </p>
-
-    </div>
-
-
-    <footer>
-
-      © 2026 Nanjing Ningyue Network Technology Co., Ltd.
-      <br>
-      All rights reserved.
-
-    </footer>
 
   </div>
+
+
+  <div class="card">
+
+    <h2>Supported Apps</h2>
+
+    <p>
+      Welcome to the official support page for applications
+      developed by Nanjing Ningyue Network Technology Company Limited.
+    </p>
+
+    <div class="app-list">
+
+      <strong>
+        Brain Teasers（脑静急转弯-手表益智问答）
+      </strong>
+      <br>
+      Apple Watch Trivia & Brain Challenge
+
+      <br><br>
+
+      <strong>
+        Bean Break Master（拆豆大师-手表游戏）
+      </strong>
+      <br>
+      Casual Puzzle Game for iPhone and Apple Watch
+
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Technical Support</h2>
+
+    <p>
+      If you experience any problems while using our applications,
+      please contact us. We will be happy to assist you.
+    </p>
+
+    <p>
+      Our applications are designed for iPhone and Apple Watch
+      and provide lightweight entertainment, puzzle,
+      trivia, and casual gaming experiences.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Brain Teasers（脑静急转弯-手表益智问答）</h2>
+
+    <p>
+      Brain Teasers is a trivia and puzzle application designed
+      to provide quick and entertaining brain challenges,
+      especially for Apple Watch users.
+    </p>
+
+
+    <h3>Frequently Asked Questions</h3>
+
+
+    <p class="question">
+      How do I start a quiz?
+    </p>
+
+    <p class="answer">
+      Open Brain Teasers on your Apple Watch and tap the start
+      option to begin answering questions.
+    </p>
+
+
+    <p class="question">
+      How is my score calculated?
+    </p>
+
+    <p class="answer">
+      Your score is based on your answers and progress
+      within the quiz.
+    </p>
+
+
+    <p class="question">
+      Does Brain Teasers require an Internet connection?
+    </p>
+
+    <p class="answer">
+      The main quiz features can work locally on your device
+      and do not require a continuous Internet connection.
+    </p>
+
+
+    <p class="question">
+      What should I do if the quiz does not work correctly?
+    </p>
+
+    <p class="answer">
+      Try closing and reopening the application.
+      You can also restart your Apple Watch and make sure
+      that your device is running a supported system version.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Bean Break Master（拆豆大师-手表游戏）</h2>
+
+    <p>
+      Bean Break Master is a casual puzzle game designed
+      for iPhone and Apple Watch.
+    </p>
+
+    <p>
+      Players complete bean-breaking puzzle challenges
+      and progress through different levels.
+    </p>
+
+
+    <h3>Frequently Asked Questions</h3>
+
+
+    <p class="question">
+      How do I start the game?
+    </p>
+
+    <p class="answer">
+      Open Bean Break Master on your iPhone or Apple Watch
+      and tap the start button to begin the game.
+    </p>
+
+
+    <p class="question">
+      How do I progress through levels?
+    </p>
+
+    <p class="answer">
+      Complete the objective of the current puzzle
+      to continue to the next level.
+    </p>
+
+
+    <p class="question">
+      Is my game progress stored online?
+    </p>
+
+    <p class="answer">
+      Game progress is primarily stored locally on your device.
+    </p>
+
+
+    <p class="question">
+      Does Bean Break Master require an Internet connection?
+    </p>
+
+    <p class="answer">
+      The main gameplay does not require a continuous
+      Internet connection.
+    </p>
+
+
+    <p class="question">
+      Can I play Bean Break Master on Apple Watch?
+    </p>
+
+    <p class="answer">
+      Yes. Bean Break Master supports Apple Watch
+      and provides gameplay designed for the watch interface.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Troubleshooting</h2>
+
+
+    <p class="question">
+      What should I do if an app is not working correctly?
+    </p>
+
+    <p class="answer">
+      Please make sure your iPhone and Apple Watch are running
+      supported system versions. Try closing and reopening the app
+      or restarting your device. If the problem continues,
+      please contact us.
+    </p>
+
+
+    <p class="question">
+      What should I do if the Apple Watch app does not open correctly?
+    </p>
+
+    <p class="answer">
+      Make sure your Apple Watch is properly paired with your iPhone,
+      the application is installed correctly, and both devices
+      are running supported system versions.
+    </p>
+
+
+    <p class="question">
+      What should I do if the Apple Watch app is not installed?
+    </p>
+
+    <p class="answer">
+      Open the Watch app on your iPhone and check whether the
+      application is available for installation on your Apple Watch.
+    </p>
+
+
+    <p class="question">
+      What should I do if the app closes unexpectedly?
+    </p>
+
+    <p class="answer">
+      Restart the application first. If the issue continues,
+      restart your device and check whether a newer version
+      of the application is available.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Contact Us</h2>
+
+    <p>
+      If you have questions, feedback, suggestions,
+      or technical issues, please contact our support team.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:shaojie@ningyue.xyz">
+        shaojie@ningyue.xyz
+      </a>
+    </p>
+
+    <p>
+      Please include the application name and a short description
+      of the issue so that we can assist you more efficiently.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>Developer</h2>
+
+    <p>
+      Nanjing Ningyue Network Technology Company Limited
+    </p>
+
+  </div>
+
+
+  <footer>
+
+    © 2026 Nanjing Ningyue Network Technology Company Limited
+    <br>
+    All rights reserved.
+
+  </footer>
+
+</div>
 
 </body>
 </html>
