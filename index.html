@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -56,6 +55,12 @@
       font-size: 18px;
     }
 
+    .subtitle-cn {
+      margin-top: 4px;
+      color: #86868b;
+      font-size: 16px;
+    }
+
     .card {
       background: #ffffff;
       border-radius: 18px;
@@ -66,6 +71,7 @@
 
     h2 {
       margin-top: 0;
+      margin-bottom: 20px;
       font-size: 22px;
     }
 
@@ -80,6 +86,12 @@
       margin-bottom: 12px;
     }
 
+    .cn {
+      color: #6e6e73;
+      margin-top: -6px;
+      margin-bottom: 20px;
+    }
+
     .app-list {
       background: #f5f5f7;
       padding: 18px;
@@ -88,15 +100,51 @@
       line-height: 1.8;
     }
 
+    .app-item {
+      margin-bottom: 22px;
+    }
+
+    .app-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .app-name {
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .app-desc {
+      color: #6e6e73;
+    }
+
     .question {
       font-weight: 600;
       margin-bottom: 5px;
     }
 
+    .question-cn {
+      font-weight: 600;
+      color: #444;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
     .answer {
       color: #6e6e73;
       margin-top: 0;
-      margin-bottom: 22px;
+      margin-bottom: 5px;
+    }
+
+    .answer-cn {
+      color: #86868b;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid #e5e5e7;
+      margin: 22px 0;
     }
 
     a {
@@ -129,396 +177,645 @@
       }
     }
   </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
+  <!-- Header -->
   <div class="header">
+    <div class="icon">🎮</div>
 
-```
-<div class="icon">🎮</div>
+    <h1>App Support</h1>
 
-<h1>App Support</h1>
+    <div class="subtitle">
+      Brain Teasers, Bean Break Master & Shake It
+    </div>
 
-<div class="subtitle">
-  Brain Teasers, Bean Break Master & Shake It
-</div>
-```
-
+    <div class="subtitle-cn">
+      应用技术支持中心
+    </div>
   </div>
 
+
+  <!-- Supported Apps -->
   <div class="card">
 
-```
-<h2>Supported Apps</h2>
+    <h2>Supported Apps / 支持的应用</h2>
 
-<p>
-  Welcome to the official support page for applications
-  developed by Nanjing Ningyue Network Technology Company Limited.
-</p>
+    <p>
+      Welcome to the official support page for applications
+      developed by Nanjing Ningyue Network Technology Company Limited.
+    </p>
 
-<div class="app-list">
+    <p class="cn">
+      欢迎访问南京宁跃网络科技有限公司开发应用的官方技术支持页面。
+    </p>
 
-  <strong>
-    Brain Teasers（脑静急转弯-手表益智问答）
-  </strong>
-  <br>
-  Apple Watch Trivia & Brain Challenge
+    <div class="app-list">
 
-  <br><br>
+      <div class="app-item">
+        <div class="app-name">
+          Brain Teasers（脑静急转弯-手表益智问答）
+        </div>
 
-  <strong>
-    Bean Break Master（拆豆大师-手表游戏）
-  </strong>
-  <br>
-  Casual Puzzle Game for iPhone & Apple Watch
+        <div class="app-desc">
+          Apple Watch Trivia & Brain Challenge<br>
+          Apple Watch 益智问答与脑力挑战
+        </div>
+      </div>
 
-  <br><br>
+      <div class="app-item">
+        <div class="app-name">
+          Bean Break Master（拆豆大师-手表游戏）
+        </div>
 
-  <strong>
-    Shake It（摇一摇 - 趣味图片）
-  </strong>
-  <br>
-  Fun Photo Effects for iPhone
+        <div class="app-desc">
+          Casual Puzzle Game for iPhone & Apple Watch<br>
+          支持 iPhone 与 Apple Watch 的休闲益智游戏
+        </div>
+      </div>
 
-</div>
-```
+      <div class="app-item">
+        <div class="app-name">
+          Shake It（摇一摇 - 趣味图片）
+        </div>
 
+        <div class="app-desc">
+          Fun Photo Effects for iPhone<br>
+          iPhone 趣味图片互动特效应用
+        </div>
+      </div>
+
+    </div>
   </div>
 
+
+  <!-- Technical Support -->
   <div class="card">
 
-```
-<h2>Technical Support</h2>
+    <h2>Technical Support / 技术支持</h2>
 
-<p>
-  If you experience any problems while using our applications,
-  please contact us. We will be happy to assist you.
-</p>
+    <p>
+      If you experience any problems while using our applications,
+      please contact us. We will be happy to assist you.
+    </p>
 
-<p>
-  Our applications are designed for iPhone and Apple Watch
-  and provide lightweight entertainment, puzzle,
-  trivia, casual gaming, and creative photo experiences.
-</p>
-```
+    <p class="cn">
+      如果您在使用我们的应用过程中遇到任何问题，
+      欢迎联系我们，我们将尽力为您提供帮助。
+    </p>
+
+    <p>
+      Our applications are designed for iPhone and Apple Watch
+      and provide lightweight entertainment, puzzle,
+      trivia, casual gaming, and creative photo experiences.
+    </p>
+
+    <p class="cn">
+      我们的应用主要面向 iPhone 和 Apple Watch，
+      提供休闲娱乐、益智问答、轻量游戏以及创意图片互动体验。
+    </p>
 
   </div>
 
+
+  <!-- Brain Teasers -->
   <div class="card">
 
-```
-<h2>Brain Teasers（脑静急转弯-手表益智问答）</h2>
+    <h2>
+      Brain Teasers<br>
+      脑静急转弯-手表益智问答
+    </h2>
 
-<p>
-  Brain Teasers is a trivia and puzzle application designed
-  to provide quick and entertaining brain challenges,
-  especially for Apple Watch users.
-</p>
+    <p>
+      Brain Teasers is a trivia and puzzle application designed
+      to provide quick and entertaining brain challenges,
+      especially for Apple Watch users.
+    </p>
 
+    <p class="cn">
+      《脑静急转弯-手表益智问答》是一款休闲益智问答应用，
+      主要面向 Apple Watch 用户，为用户提供轻松、有趣的脑力挑战。
+    </p>
 
-<h3>Frequently Asked Questions</h3>
+    <h3>Frequently Asked Questions / 常见问题</h3>
 
+    <p class="question">
+      How do I start a quiz?
+    </p>
 
-<p class="question">
-  How do I start a quiz?
-</p>
+    <p class="question-cn">
+      如何开始答题？
+    </p>
 
-<p class="answer">
-  Open Brain Teasers on your Apple Watch and tap the start
-  option to begin answering questions.
-</p>
+    <p class="answer">
+      Open Brain Teasers on your Apple Watch and tap the start
+      option to begin answering questions.
+    </p>
 
-
-<p class="question">
-  How is my score calculated?
-</p>
-
-<p class="answer">
-  Your score is based on your answers and progress
-  within the quiz.
-</p>
-
-
-<p class="question">
-  Does Brain Teasers require an Internet connection?
-</p>
-
-<p class="answer">
-  The main quiz features can work locally on your device
-  and do not require a continuous Internet connection.
-</p>
+    <p class="answer-cn">
+      在 Apple Watch 上打开应用，然后点击开始按钮即可进入答题。
+    </p>
 
 
-<p class="question">
-  What should I do if the quiz does not work correctly?
-</p>
+    <p class="question">
+      How is my score calculated?
+    </p>
 
-<p class="answer">
-  Try closing and reopening the application.
-  You can also restart your Apple Watch and make sure
-  that your device is running a supported system version.
-</p>
-```
+    <p class="question-cn">
+      分数是如何计算的？
+    </p>
+
+    <p class="answer">
+      Your score is based on your answers and progress
+      within the quiz.
+    </p>
+
+    <p class="answer-cn">
+      分数根据您的答题结果以及当前答题进度进行计算。
+    </p>
+
+
+    <p class="question">
+      Does Brain Teasers require an Internet connection?
+    </p>
+
+    <p class="question-cn">
+      应用需要连接互联网吗？
+    </p>
+
+    <p class="answer">
+      The main quiz features can work locally on your device
+      and do not require a continuous Internet connection.
+    </p>
+
+    <p class="answer-cn">
+      主要答题功能可以在设备本地运行，
+      不需要持续连接互联网。
+    </p>
+
+
+    <p class="question">
+      What should I do if the quiz does not work correctly?
+    </p>
+
+    <p class="question-cn">
+      如果答题功能出现异常怎么办？
+    </p>
+
+    <p class="answer">
+      Try closing and reopening the application.
+      You can also restart your Apple Watch and make sure
+      that your device is running a supported system version.
+    </p>
+
+    <p class="answer-cn">
+      请尝试关闭并重新打开应用。
+      您也可以重新启动 Apple Watch，
+      并确认设备正在运行受支持的系统版本。
+    </p>
 
   </div>
 
+
+  <!-- Bean Break Master -->
   <div class="card">
 
-```
-<h2>Bean Break Master（拆豆大师-手表游戏）</h2>
+    <h2>
+      Bean Break Master<br>
+      拆豆大师-手表游戏
+    </h2>
 
-<p>
-  Bean Break Master is a casual puzzle game designed
-  for iPhone and Apple Watch.
-</p>
+    <p>
+      Bean Break Master is a casual puzzle game designed
+      for iPhone and Apple Watch.
+    </p>
 
-<p>
-  Players complete bean-breaking puzzle challenges
-  and progress through different levels.
-</p>
+    <p class="cn">
+      《拆豆大师》是一款支持 iPhone 和 Apple Watch 的休闲益智游戏。
+    </p>
 
+    <p>
+      Players observe the bean layout in each level,
+      complete puzzle objectives, and progress through
+      different challenges.
+    </p>
 
-<h3>Frequently Asked Questions</h3>
+    <p class="cn">
+      玩家需要观察每个关卡中的豆子布局，
+      完成对应的拆豆目标并逐步挑战不同关卡。
+    </p>
 
-
-<p class="question">
-  How do I start the game?
-</p>
-
-<p class="answer">
-  Open Bean Break Master on your iPhone or Apple Watch
-  and tap the start button to begin the game.
-</p>
-
-
-<p class="question">
-  How do I progress through levels?
-</p>
-
-<p class="answer">
-  Complete the objective of the current puzzle
-  to continue to the next level.
-</p>
+    <h3>Frequently Asked Questions / 常见问题</h3>
 
 
-<p class="question">
-  Is my game progress stored online?
-</p>
+    <p class="question">
+      How do I start the game?
+    </p>
 
-<p class="answer">
-  Game progress is primarily stored locally on your device.
-</p>
+    <p class="question-cn">
+      如何开始游戏？
+    </p>
+
+    <p class="answer">
+      Open Bean Break Master on your iPhone or Apple Watch
+      and tap the start button to begin the game.
+    </p>
+
+    <p class="answer-cn">
+      在 iPhone 或 Apple Watch 上打开《拆豆大师》，
+      点击开始按钮即可进入游戏。
+    </p>
 
 
-<p class="question">
-  Does Bean Break Master require an Internet connection?
-</p>
+    <p class="question">
+      How do I progress through levels?
+    </p>
 
-<p class="answer">
-  The main gameplay does not require a continuous
-  Internet connection.
-</p>
+    <p class="question-cn">
+      如何进入下一关？
+    </p>
+
+    <p class="answer">
+      Complete the objective of the current puzzle
+      to continue to the next level.
+    </p>
+
+    <p class="answer-cn">
+      完成当前关卡规定的益智目标后，
+      即可继续进入下一关。
+    </p>
 
 
-<p class="question">
-  Can I play Bean Break Master on Apple Watch?
-</p>
+    <p class="question">
+      Is my game progress stored online?
+    </p>
 
-<p class="answer">
-  Yes. Bean Break Master supports Apple Watch
-  and provides gameplay designed for the watch interface.
-</p>
-```
+    <p class="question-cn">
+      游戏进度会上传到服务器吗？
+    </p>
+
+    <p class="answer">
+      Game progress is primarily stored locally on your device.
+    </p>
+
+    <p class="answer-cn">
+      游戏进度主要保存在您的设备本地。
+    </p>
+
+
+    <p class="question">
+      Does Bean Break Master require an Internet connection?
+    </p>
+
+    <p class="question-cn">
+      《拆豆大师》需要网络连接吗？
+    </p>
+
+    <p class="answer">
+      The main gameplay does not require a continuous
+      Internet connection.
+    </p>
+
+    <p class="answer-cn">
+      主要游戏功能不需要持续连接互联网。
+    </p>
+
+
+    <p class="question">
+      Can I play Bean Break Master on Apple Watch?
+    </p>
+
+    <p class="question-cn">
+      可以在 Apple Watch 上游玩吗？
+    </p>
+
+    <p class="answer">
+      Yes. Bean Break Master supports Apple Watch
+      and provides gameplay designed for the watch interface.
+    </p>
+
+    <p class="answer-cn">
+      可以。《拆豆大师》支持 Apple Watch，
+      并针对手表界面提供相应的游戏体验。
+    </p>
 
   </div>
 
+
+  <!-- Shake It -->
   <div class="card">
 
-```
-<h2>Shake It（摇一摇 - 趣味图片）</h2>
+    <h2>
+      Shake It<br>
+      摇一摇 - 趣味图片
+    </h2>
 
-<p>
-  Shake It is a fun photo effects application designed
-  for iPhone.
-</p>
+    <p>
+      Shake It is a fun photo effects application designed
+      for iPhone.
+    </p>
 
-<p>
-  Users can select a photo and interact with selected areas
-  of the image using device motion to create playful
-  and dynamic visual effects.
-</p>
+    <p class="cn">
+      《摇一摇 - 趣味图片》是一款面向 iPhone 的趣味图片互动应用。
+    </p>
 
+    <p>
+      Users can select a photo and interact with selected areas
+      of the image using device motion to create playful
+      and dynamic visual effects.
+    </p>
 
-<h3>Frequently Asked Questions</h3>
-
-
-<p class="question">
-  How do I use Shake It?
-</p>
-
-<p class="answer">
-  Open Shake It, select a photo from your device,
-  choose the area you want to apply the effect to,
-  and move or shake your iPhone to see the visual effect.
-</p>
+    <p class="cn">
+      用户可以选择设备中的图片，并选取图片中的特定区域，
+      通过移动或晃动 iPhone 产生有趣的动态视觉效果。
+    </p>
 
 
-<p class="question">
-  Why does the app request access to my photos?
-</p>
-
-<p class="answer">
-  Photo access is used only so that you can select images
-  from your photo library for use within the application.
-</p>
+    <h3>Frequently Asked Questions / 常见问题</h3>
 
 
-<p class="question">
-  Are my photos uploaded to a server?
-</p>
+    <p class="question">
+      How do I use Shake It?
+    </p>
 
-<p class="answer">
-  Photo processing is performed locally on your device.
-  Your selected photos are not uploaded to our servers
-  as part of the main photo effect features.
-</p>
+    <p class="question-cn">
+      如何使用《摇一摇》？
+    </p>
 
+    <p class="answer">
+      Open Shake It, select a photo from your device,
+      choose the area you want to apply the effect to,
+      and move or shake your iPhone to see the visual effect.
+    </p>
 
-<p class="question">
-  Does Shake It require an Internet connection?
-</p>
-
-<p class="answer">
-  The main photo effect features can be used locally
-  and do not require a continuous Internet connection.
-</p>
-
-
-<p class="question">
-  What should I do if the motion effect does not respond?
-</p>
-
-<p class="answer">
-  Make sure you have selected an effect area correctly.
-  Then try moving or shaking your iPhone again.
-  If the issue continues, close and reopen the application
-  or restart your device.
-</p>
+    <p class="answer-cn">
+      打开应用，从设备中选择一张图片，
+      选择需要应用效果的区域，然后移动或晃动 iPhone
+      即可查看动态效果。
+    </p>
 
 
-<p class="question">
-  Can I choose a custom area of a photo?
-</p>
+    <p class="question">
+      Why does the app request access to my photos?
+    </p>
 
-<p class="answer">
-  Yes. Shake It allows you to select or define an area
-  of the photo where the interactive effect will be applied.
-</p>
-```
+    <p class="question-cn">
+      为什么应用需要访问照片？
+    </p>
+
+    <p class="answer">
+      Photo access is used only so that you can select images
+      from your photo library for use within the application.
+    </p>
+
+    <p class="answer-cn">
+      照片权限仅用于让您从系统照片库中选择图片，
+      以便在应用内使用。
+    </p>
+
+
+    <p class="question">
+      Are my photos uploaded to a server?
+    </p>
+
+    <p class="question-cn">
+      我的照片会上传到服务器吗？
+    </p>
+
+    <p class="answer">
+      Photo processing is performed locally on your device.
+      Your selected photos are not uploaded to our servers
+      as part of the main photo effect features.
+    </p>
+
+    <p class="answer-cn">
+      图片处理主要在您的设备本地完成。
+      在主要图片特效功能中，
+      您选择的照片不会上传到我们的服务器。
+    </p>
+
+
+    <p class="question">
+      Does Shake It require an Internet connection?
+    </p>
+
+    <p class="question-cn">
+      《摇一摇》需要互联网连接吗？
+    </p>
+
+    <p class="answer">
+      The main photo effect features can be used locally
+      and do not require a continuous Internet connection.
+    </p>
+
+    <p class="answer-cn">
+      主要图片特效功能可以在本地使用，
+      不需要持续连接互联网。
+    </p>
+
+
+    <p class="question">
+      What should I do if the motion effect does not respond?
+    </p>
+
+    <p class="question-cn">
+      如果晃动效果没有反应怎么办？
+    </p>
+
+    <p class="answer">
+      Make sure you have selected an effect area correctly.
+      Then try moving or shaking your iPhone again.
+      If the issue continues, close and reopen the application
+      or restart your device.
+    </p>
+
+    <p class="answer-cn">
+      请确认已经正确选择效果区域，
+      然后再次移动或晃动 iPhone。
+      如果问题仍然存在，请尝试重新打开应用或重新启动设备。
+    </p>
+
+
+    <p class="question">
+      Can I choose a custom area of a photo?
+    </p>
+
+    <p class="question-cn">
+      可以自定义图片区域吗？
+    </p>
+
+    <p class="answer">
+      Yes. Shake It allows you to select or define an area
+      of the photo where the interactive effect will be applied.
+    </p>
+
+    <p class="answer-cn">
+      可以。您可以选择或自定义图片中的特定区域，
+      并将互动效果应用到该区域。
+    </p>
 
   </div>
 
+
+  <!-- Troubleshooting -->
   <div class="card">
 
-```
-<h2>Troubleshooting</h2>
+    <h2>Troubleshooting / 故障排除</h2>
 
 
-<p class="question">
-  What should I do if an app is not working correctly?
-</p>
+    <p class="question">
+      What should I do if an app is not working correctly?
+    </p>
 
-<p class="answer">
-  Please make sure your iPhone and Apple Watch are running
-  supported system versions. Try closing and reopening the app
-  or restarting your device. If the problem continues,
-  please contact us.
-</p>
+    <p class="question-cn">
+      如果应用无法正常运行怎么办？
+    </p>
 
+    <p class="answer">
+      Please make sure your iPhone and Apple Watch are running
+      supported system versions. Try closing and reopening the app
+      or restarting your device. If the problem continues,
+      please contact us.
+    </p>
 
-<p class="question">
-  What should I do if the Apple Watch app does not open correctly?
-</p>
-
-<p class="answer">
-  Make sure your Apple Watch is properly paired with your iPhone,
-  the application is installed correctly, and both devices
-  are running supported system versions.
-</p>
-
-
-<p class="question">
-  What should I do if the Apple Watch app is not installed?
-</p>
-
-<p class="answer">
-  Open the Watch app on your iPhone and check whether the
-  application is available for installation on your Apple Watch.
-</p>
+    <p class="answer-cn">
+      请确认您的 iPhone 和 Apple Watch
+      正在运行受支持的系统版本。
+      您可以尝试关闭并重新打开应用或重新启动设备。
+      如果问题仍然存在，请联系我们。
+    </p>
 
 
-<p class="question">
-  What should I do if the app closes unexpectedly?
-</p>
+    <p class="question">
+      What should I do if the Apple Watch app does not open correctly?
+    </p>
 
-<p class="answer">
-  Restart the application first. If the issue continues,
-  restart your device and check whether a newer version
-  of the application is available.
-</p>
-```
+    <p class="question-cn">
+      Apple Watch 应用无法正常打开怎么办？
+    </p>
+
+    <p class="answer">
+      Make sure your Apple Watch is properly paired with your iPhone,
+      the application is installed correctly, and both devices
+      are running supported system versions.
+    </p>
+
+    <p class="answer-cn">
+      请确认 Apple Watch 已正确与 iPhone 配对，
+      应用已经正确安装，并且两个设备均运行受支持的系统版本。
+    </p>
+
+
+    <p class="question">
+      What should I do if the Apple Watch app is not installed?
+    </p>
+
+    <p class="question-cn">
+      Apple Watch 上没有安装应用怎么办？
+    </p>
+
+    <p class="answer">
+      Open the Watch app on your iPhone and check whether the
+      application is available for installation on your Apple Watch.
+    </p>
+
+    <p class="answer-cn">
+      请打开 iPhone 上的 Watch 应用，
+      检查该应用是否可以安装到您的 Apple Watch。
+    </p>
+
+
+    <p class="question">
+      What should I do if the app closes unexpectedly?
+    </p>
+
+    <p class="question-cn">
+      应用意外退出怎么办？
+    </p>
+
+    <p class="answer">
+      Restart the application first. If the issue continues,
+      restart your device and check whether a newer version
+      of the application is available.
+    </p>
+
+    <p class="answer-cn">
+      请先重新启动应用。
+      如果问题仍然存在，请重新启动设备，
+      并检查 App Store 中是否有更新版本。
+    </p>
 
   </div>
 
+
+  <!-- Contact -->
   <div class="card">
 
-```
-<h2>Contact Us</h2>
+    <h2>Contact Us / 联系我们</h2>
 
-<p>
-  If you have questions, feedback, suggestions,
-  or technical issues, please contact our support team.
-</p>
+    <p>
+      If you have questions, feedback, suggestions,
+      or technical issues, please contact our support team.
+    </p>
 
-<p>
-  Email:
-  <a href="mailto:shaojie@ningyue.xyz">
-    shaojie@ningyue.xyz
-  </a>
-</p>
+    <p class="cn">
+      如果您有任何问题、意见、建议或技术问题，
+      欢迎联系我们的支持团队。
+    </p>
 
-<p>
-  Please include the application name and a short description
-  of the issue so that we can assist you more efficiently.
-</p>
-```
+    <p>
+      Email:
+      <a href="mailto:shaojie@ningyue.xyz">
+        shaojie@ningyue.xyz
+      </a>
+    </p>
+
+    <p class="cn">
+      邮箱：
+      <a href="mailto:shaojie@ningyue.xyz">
+        shaojie@ningyue.xyz
+      </a>
+    </p>
+
+    <p>
+      Please include the application name and a short description
+      of the issue so that we can assist you more efficiently.
+    </p>
+
+    <p class="cn">
+      联系我们时，请提供应用名称以及问题的简要说明，
+      以便我们更高效地为您提供帮助。
+    </p>
 
   </div>
 
+
+  <!-- Developer -->
   <div class="card">
 
-```
-<h2>Developer</h2>
+    <h2>Developer / 开发者</h2>
 
-<p>
-  Nanjing Ningyue Network Technology Company Limited
-</p>
-```
+    <p>
+      Nanjing Ningyue Network Technology Company Limited
+    </p>
+
+    <p class="cn">
+      南京宁跃网络科技有限公司
+    </p>
 
   </div>
 
+
+  <!-- Footer -->
   <footer>
-
-```
-© 2026 Nanjing Ningyue Network Technology Company Limited
-<br>
-All rights reserved.
-```
-
+    © 2026 Nanjing Ningyue Network Technology Company Limited
+    <br>
+    南京宁跃网络科技有限公司
+    <br><br>
+    All rights reserved. / 保留所有权利。
   </footer>
 
 </div>
