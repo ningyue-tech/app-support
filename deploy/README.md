@@ -24,10 +24,12 @@ python3 deploy/prepare_release.py
 
 ## 访问路径
 
+当前 `ningyue.xyz` 的公开站点由独立仓库 `ningyue-tech/ningyue-website` 的 `main` 分支通过 GitHub Pages 发布。该仓库已同步本构建的 `home.html`、同内容的 `index.html` 和 `exam/`，发布提交为 `aed9773506b06e5d3b86d559b58d3b6331b9d2e2`。本仓库 `home.html` 是官网源文件；更新它后，还需同步实际发布仓库。下面的 ECS 备案及未开放状态只描述阿里云服务器，不代表当前 GitHub Pages 域名站点。
+
 | 路径 | 内容 |
 | --- | --- |
-| `/`、`/index.html` | 官网，来自当前 `home.html` |
-| `/home.html` | 同一版官网，兼容已有入口 |
+| `/`、`/home.html` | 官网，默认直接使用仓库 `home.html` 的部署副本 |
+| `/index.html` | 同一版官网的兼容副本 |
 | `/exam/`、`/exam/index.html#subjects` | 三科考试平台与科目选择 |
 | `/exam/login.html` | 原分科名单验证 |
 | `/exam/auto-exam.html` | 汽车考试 |
@@ -107,5 +109,7 @@ b5c3912922873d46167e140a8e35e40bc6d9b670bb566fee11b6b2a33a1250cd
 验收结果：服务器压缩包 SHA-256 与上值一致；374 个文件逐一通过本机 HTTP 读取，并与磁盘文件 SHA-256 比较一致。官网、考试首页、登录页及汽车、市场营销、英语页面均返回 HTTP 200；隐藏路径返回 403，不存在页面返回 404。`ss -lntp` 确认 Nginx 仅监听 `127.0.0.1:8080`，原 SSH 22 端口不变，未启用默认 Nginx 系统服务。服务器报告保存在 `/srv/ningyue/verification-20261127.json`。
 
 该实例没有设置开机启动；服务器重启后需使用上面的独立配置重新启动。本次没有修改 DNS、安全组、证书或备案资料。以上结果只表明服务器内部静态资源可用，正式域名、HTTPS 和新域名下的完整登录答题流程仍须在备案完成后另行验收。
+
+随后按用户指定，将默认首页显式设置为 `index home.html index.html;`。服务器配置已备份到 `/srv/ningyue/config/nginx-staging.before-home.conf`，语法检查通过后已重载。再次验收确认根路径响应与 `/home.html` 完全一致，`/exam/` 返回 HTTP 200。官网页面源文件始终是仓库根目录的 `home.html`。
 
 追溯说明：当前 `release.json` 记录官网源码提交，考试来源版本已在上表补充。后续构建可在 manifest 增加 `exam_source_commit`，值为本次考试输入版本 `145093f03286b267f8b01d448661a40448ce4268`，并保留考试输入文件摘要及 `SITE-SHA256SUMS`。此次仅补文档，不重建已上传包，不改变归档内容或上述 SHA-256。
