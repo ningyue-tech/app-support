@@ -1,2 +1,3 @@
 # Local copies of external websites; publish only the official site entry links.
 /local-backups/
+/deploy/dist/
