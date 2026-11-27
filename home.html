@@ -10,7 +10,7 @@
 用法：直接双击打开，或将本文件改名为 index.html 上传到静态网站空间。
 图片、样式和交互代码已全部内嵌；官网栏目离线可用，官方政策外链需要网络。
 修改配色/间距：下方 STYLE 区。修改专业、政策、作息和录取数据：ningyue-content JSON 区。
-旧学测平台、联系方式保持当前官网的待补充状态；录取情况已补充六名学生资料。
+在线考试链接至宁跃考试平台，需联网访问；录取情况已补充六名学生资料。
 内部导航使用 #/ 样式，因此本地打开、浏览器前进/后退和刷新均可工作。
 生成日期：2026-11-09。 -->
 <style>
@@ -1247,6 +1247,21 @@ html { scroll-padding-top: 24px; }
 .portal-course-description { font-size: 16px; color: #657486; line-height: 1.85; margin-top: 15px; }
 .portal-course-subjects { font-size: 14px; color: #526d84; margin-top: 22px; padding-bottom: 20px; }
 .portal-course-action { font-size: 14px; font-weight: 600; color: #005aa6; margin-top: auto; padding-top: 15px; border-top: 1px solid #e0e8ef; width: 100%; }
+.portal-exam-banner { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 32px; padding: 30px 32px; color: #fff; background: #075b9d; border: 1px solid #064e87; box-shadow: 0 5px 0 #064578, 0 12px 24px #123b5518; }
+.portal-exam-copy { min-width: 0; }
+.portal-exam-label { color: #d6eafb; font-size: 12px; letter-spacing: 1.5px; margin-bottom: 8px; }
+.portal-exam-copy h2 { font-size: 26px; letter-spacing: .5px; }
+.portal-exam-subjects { font-size: 16px; margin-top: 10px; }
+.portal-exam-description { color: #e0edf8; font-size: 14px; margin-top: 5px; }
+.portal-exam-action { flex-shrink: 0; text-align: center; }
+.portal-exam-action .portal-button { min-height: 48px; padding-inline: 30px; }
+.portal-exam-action p { color: #d6eafb; font-size: 12px; margin-top: 9px; }
+@media (max-width: 600px) {
+  .portal-exam-banner { align-items: stretch; flex-direction: column; gap: 22px; padding: 24px; margin-top: 26px; }
+  .portal-exam-copy h2 { font-size: 24px; }
+  .portal-exam-action { text-align: left; }
+  .portal-exam-action .portal-button { width: 100%; }
+}
 .portal-section-intro { font-size: 16px; color: #647487; margin: -4px 0 25px; }
 .portal-student-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 20px; }
 .portal-student { min-width: 0; border: 1px solid #dce5ed; background: #fff; box-shadow: 0 4px 0 #dfe6ed,0 8px 18px #123b5510; transition: transform .2s; }
@@ -14726,6 +14741,7 @@ html { scroll-padding-top: 24px; }
     contact: "校区与咨询"
   };
   var assets = JSON.parse(document.getElementById("ningyue-assets").textContent || "{}");
+  var EXAM_PRACTICE_URL = "https://ningyue-tech.github.io/Exam-Practice/index.html#subjects";
   function readHashRoute() {
     const hash = window.location.hash.slice(1) || "/";
     const url = new URL(hash.startsWith("/") ? hash : "/#" + hash, "https://offline.ningyue.local");
@@ -15741,7 +15757,8 @@ html { scroll-padding-top: 24px; }
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: "/gaokao", children: "职教高考介绍" }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: "/culture", children: "文化科目" }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: "/majors", children: "专业科目组" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: "/study", children: "中职学业水平测试" })
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: "/study", children: "中职学业水平测试" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: EXAM_PRACTICE_URL, target: "_blank", rel: "noopener noreferrer", children: "在线考试" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "footer-column", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "关注成长" }),
@@ -15897,6 +15914,21 @@ html { scroll-padding-top: 24px; }
                 portalH("span", { className: "portal-course-action" }, item.action)
               );
             })
+          )
+        )
+      ),
+
+      portalH("section", { className: "container", id: "online-exam", "aria-labelledby": "online-exam-title" },
+        portalH("div", { className: "portal-exam-banner" },
+          portalH("div", { className: "portal-exam-copy" },
+            portalH("p", { className: "portal-exam-label" }, "ONLINE EXAM · 学习与练习"),
+            portalH("h2", { id: "online-exam-title" }, "宁跃在线考试"),
+            portalH("p", { className: "portal-exam-subjects" }, "汽车科目组 · 市场营销科目组 · 英语"),
+            portalH("p", { className: "portal-exam-description" }, "分科练习、模拟机考与答题复盘，让每一次练习都有收获。")
+          ),
+          portalH("div", { className: "portal-exam-action" },
+            portalH("a", { className: "portal-button", href: EXAM_PRACTICE_URL, target: "_blank", rel: "noopener noreferrer" }, "进入在线考试"),
+            portalH("p", null, "新窗口打开 · 按科目完成名单验证")
           )
         )
       ),
@@ -16214,13 +16246,10 @@ html { scroll-padding-top: 24px; }
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "round-icon", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Monitor, {}) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "eyebrow", children: "ONLINE PRACTICE · 在线练习" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "宁跃在线学习平台" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "在线练习入口暂未开放。现可浏览各科备考方向、专业说明与官方考试安排。" })
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "宁跃在线考试平台" }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "汽车科目组、市场营销科目组与英语练习已开放，按对应科目完成名单验证后进入。" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/gaokao#policies", className: "button button-secondary", children: [
-            "查看考试安排",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 16 })
-          ] })
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: EXAM_PRACTICE_URL, target: "_blank", rel: "noopener noreferrer", className: "button button-secondary", children: "进入在线考试" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(SourceNote, { children: "中职学考与职教高考分别组织报名和考试。2026年学考专业综合理论按29个专业类组织，不能直接用职教高考的16个科目组替代。" })
       ] }),
