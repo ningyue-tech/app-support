@@ -1158,6 +1158,254 @@ strong { font-weight: 650; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
+/* University portal layout: shared masthead and homepage */
+:root { --paper: #fff; --ink: #243445; --green: #005aa6; --green-dark: #003e78; --muted: #647487; --line: #dfe7ee; --sage: #eef5fb; }
+body { font-size: 16px; }
+.container { max-width: 1340px; padding-inline: 40px; }
+html { scroll-padding-top: 24px; }
+[id] { scroll-margin-top: 24px; }
+::selection { background: #cbe3f9; color: #003e78; }
+.topbar { background: #004682; color: #d3e5f5; font-size: 12px; line-height: 34px; letter-spacing: .5px; }
+.topbar svg { display: none; }
+.site-header { position: relative; background: #005aa6; border: 0; backdrop-filter: none; }
+.header-inner { min-height: 114px; gap: 32px; }
+.site-header .brand { gap: 17px; color: #fff; }
+.site-header .brand-symbol { width: 66px; height: 66px; padding: 8px; background: #fff; border-radius: 4px; }
+.site-header .brand-symbol img { width: 50px; height: 50px; }
+.site-header .brand-wordmark strong { font-size: 35px; letter-spacing: 5px; font-weight: 650; }
+.site-header .brand-wordmark > span { font-size: 11px; letter-spacing: 2.2px; color: #d8e9f9; }
+.portal-motto { margin-left: auto; display: flex; flex-direction: column; color: #fff; text-align: right; gap: 5px; }
+.portal-motto strong { font-size: 22px; letter-spacing: 4px; font-weight: 500; }
+.portal-motto span { font-size: 12px; letter-spacing: 2px; color: #d3e5f5; }
+.header-contact { color: #fff; border-color: #ffffff70; border-radius: 2px; padding: 10px 16px; font-size: 14px; margin-left: 12px; }
+.header-contact:hover { color: #005aa6; background: #fff; }
+.portal-nav-wrap { background: #f3f5f7; border-bottom: 1px solid #dce5ed; }
+.desktop-nav { height: 60px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 0; }
+.desktop-nav > a { color: #263746; justify-content: center; font-size: 17px; transition: background .18s, color .18s; }
+.desktop-nav > a::after { display: none; }
+.desktop-nav > a:hover, .desktop-nav > a.active { background: #005aa6; color: #fff; }
+.mobile-menu-button { display: none; }
+.mobile-nav { display: none; }
+.portal-hero { position: relative; min-height: 510px; isolation: isolate; overflow: hidden; background: #123f61; }
+.portal-hero-image { position: absolute; z-index: -2; inset: 0 0 0 auto; width: 70%; height: 100%; object-fit: cover; object-position: center 54%; }
+.portal-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,#073f70 0%,#073f70 30%,#073f70b8 46%,#073f701c 68%,#073f7000 100%); }
+.portal-hero-content { min-height: 510px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; color: #fff; padding-block: 55px; }
+.portal-kicker { font-size: 14px; letter-spacing: 3px; color: #daeafa; margin-bottom: 18px; }
+.portal-hero h1 { font-size: clamp(34px,3.3vw,48px); line-height: 1.55; font-weight: 600; letter-spacing: 1px; }
+.portal-hero h1 span { color: #fff; }
+.portal-hero-description { margin-top: 20px; font-size: 16px; line-height: 1.9; color: #e4edf6; }
+.portal-hero-actions { display: flex; gap: 14px; margin-top: 27px; }
+.portal-button { display: inline-flex; justify-content: center; align-items: center; padding: 11px 23px; background: #fff; color: #005aa6; border: 1px solid #fff; border-radius: 2px; font-size: 15px; font-weight: 600; transition: background .2s, color .2s; }
+.portal-button:hover { background: #e1effc; border-color: #e1effc; }
+.portal-button-outline { color: #fff; background: #003d6926; border-color: #ffffff9c; }
+.portal-button-outline:hover { background: #fff; color: #005aa6; }
+.portal-shortcuts { background: #f0f6fb; border-bottom: 1px solid #dfe9f3; }
+.portal-shortcut-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); padding-block: 28px; }
+.portal-shortcut { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 6px 8px; border-right: 1px solid #d6e2ee; color: #1d527c; font-size: 16px; transition: color .18s, background .18s; }
+.portal-shortcut:last-child { border-right: 0; }
+.portal-shortcut svg { width: 30px; height: 30px; stroke-width: 1.5; }
+.portal-shortcut:hover { color: #005aa6; background: #e4eef7; }
+.portal-section { padding-block: 58px; }
+.portal-heading { display: flex; justify-content: space-between; align-items: center; gap: 18px; border-bottom: 1px solid #dbe4ec; padding-bottom: 15px; margin-bottom: 25px; }
+.portal-heading-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px; position: relative; }
+.portal-heading-title::after { content: ""; position: absolute; bottom: -16px; left: 0; width: 45px; height: 3px; background: #ba873b; }
+.portal-heading h2 { font-size: 28px; color: #005aa6; letter-spacing: 1px; font-weight: 650; }
+.portal-heading-en { color: #82909d; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; }
+.portal-more { flex-shrink: 0; color: #66788b; font-size: 14px; padding: 7px 0 7px 12px; }
+.portal-more:hover { color: #005aa6; }
+.portal-news-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.portal-news-layout > *, .portal-info-grid > * { min-width: 0; }
+.portal-focus-feature { display: block; background: #fff; border: 1px solid #dce5ed; box-shadow: 0 4px 0 #e3eaf0, 0 8px 18px #173b5710; }
+.portal-focus-image { position: relative; height: 275px; overflow: hidden; background: #e9eee5; }
+.portal-focus-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; transition: transform .4s; }
+.portal-focus-feature:hover img { transform: scale(1.025); }
+.portal-focus-caption { position: absolute; bottom: 0; left: 0; background: #005aa6ed; color: #fff; padding: 9px 17px; font-size: 14px; }
+.portal-focus-copy { padding: 22px 24px 24px; }
+.portal-focus-copy h3 { font-size: 21px; margin-bottom: 13px; color: #244763; }
+.portal-focus-copy p { font-size: 16px; color: #647487; line-height: 1.85; }
+.portal-focus-copy .portal-focus-summary { font-size: 14px; color: #005aa6; margin-top: 18px; }
+.portal-policy-list { list-style: none; margin: 0; padding: 0; }
+.portal-policy-list li + li { border-top: 1px solid #e4eaf0; }
+.portal-policy-item { display: grid; grid-template-columns: 62px minmax(0,1fr); gap: 18px; padding: 16px 0; align-items: start; }
+.portal-policy-list li:first-child .portal-policy-item { padding-top: 0; }
+.portal-policy-date { display: flex; flex-direction: column; text-align: center; border: 1px solid #dce6ef; color: #005aa6; background: #f2f7fc; }
+.portal-policy-date strong { font-size: 25px; line-height: 1.45; padding: 1px 4px; }
+.portal-policy-date span { font-size: 12px; background: #005aa6; color: #fff; line-height: 24px; }
+.portal-policy-category { display: none; }
+.portal-policy-copy h3 { font-size: 16px; font-weight: 500; line-height: 1.7; transition: color .18s; }
+.portal-policy-item:hover h3 { color: #005aa6; }
+.portal-policy-source { display: block; color: #7a8894; font-size: 12px; margin-top: 5px; }
+.portal-policy-note { margin-top: 14px; font-size: 12px; color: #718092; }
+.portal-teaching { background: #eff5fa; border-block: 1px solid #e2ebf2; }
+.portal-course-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px; }
+.portal-course { position: relative; display: flex; flex-direction: column; align-items: flex-start; padding: 29px; border: 1px solid #dae4ed; border-top: 3px solid #005aa6; background: #fff; box-shadow: 0 4px 0 #dce5ed,0 10px 22px #123b5510; transition: transform .2s,box-shadow .2s; }
+.portal-course:hover { transform: translateY(-3px); box-shadow: 0 5px 0 #d2deea,0 12px 25px #123b5518; }
+.portal-course-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; color: #005aa6; margin-bottom: 22px; }
+.portal-course-top svg { width: 34px; height: 34px; stroke-width: 1.4; }
+.portal-course-en { font-size: 11px; letter-spacing: .7px; color: #718397; text-align: right; }
+.portal-course h3 { font-size: 22px; color: #174e79; }
+.portal-course-description { font-size: 16px; color: #657486; line-height: 1.85; margin-top: 15px; }
+.portal-course-subjects { font-size: 14px; color: #526d84; margin-top: 22px; padding-bottom: 20px; }
+.portal-course-action { font-size: 14px; font-weight: 600; color: #005aa6; margin-top: auto; padding-top: 15px; border-top: 1px solid #e0e8ef; width: 100%; }
+.portal-section-intro { font-size: 16px; color: #647487; margin: -4px 0 25px; }
+.portal-student-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 20px; }
+.portal-student { min-width: 0; border: 1px solid #dce5ed; background: #fff; box-shadow: 0 4px 0 #dfe6ed,0 8px 18px #123b5510; transition: transform .2s; }
+.portal-student:hover { transform: translateY(-3px); }
+.portal-student-photo { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: #edf1f5; margin: 7px 7px 0; }
+.portal-student-photo img { position: absolute; max-width: none; height: auto; }
+.portal-student-info { padding: 15px 13px; }
+.portal-student-info h3 { font-size: 19px; color: #26435d; }
+.portal-student-score { margin-top: 8px; display: flex; align-items: baseline; gap: 5px; color: #6f7d8a; white-space: nowrap; }
+.portal-student-score span { font-size: 12px; }
+.portal-student-score strong { font-size: 21px; color: #005aa6; margin-left: auto; line-height: 1.3; }
+.portal-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding-top: 0; }
+.portal-management-item { display: block; padding: 20px 0; border-bottom: 1px solid #e1e8ef; }
+.portal-management-item:first-child { padding-top: 0; }
+.portal-management-item h3 { font-size: 18px; color: #274c69; margin-bottom: 8px; }
+.portal-management-item p { font-size: 16px; color: #69798b; line-height: 1.8; }
+.portal-management-item:hover h3 { color: #005aa6; }
+.portal-major-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; }
+.portal-major-link { display: flex; align-items: center; gap: 13px; background: #f1f6fb; border: 1px solid #dce6ef; padding: 22px 15px; box-shadow: 0 3px 0 #e2eaf1; transition: background .2s; }
+.portal-major-link:hover { background: #e2eef9; }
+.portal-major-link > svg { width: 27px; height: 27px; stroke-width: 1.4; color: #005aa6; }
+.portal-major-link h3 { font-size: 17px; color: #24577f; }
+.portal-major-link p { font-size: 12px; color: #738295; margin-top: 5px; }
+.portal-contact-band { color: #fff; background: #075b9d; border-bottom: 1px solid #ffffff26; }
+.portal-contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-block: 39px; }
+.portal-contact-label { font-size: 14px; letter-spacing: 2px; color: #cde4f6; margin-bottom: 9px; }
+.portal-contact-copy h2 { font-size: 27px; font-weight: 500; letter-spacing: .5px; }
+.portal-contact-address { display: flex; align-items: center; gap: 8px; margin-top: 17px; font-size: 15px; color: #e2eef7; }
+.portal-contact-address svg { width: 17px; height: 17px; }
+.portal-contact-campuses { color: #cde4f6; font-size: 13px; margin-top: 6px; padding-left: 25px; }
+.portal-contact-link { flex-shrink: 0; }
+.footer { background: #00467f; color: #fff; padding-top: 48px; }
+.footer-top { padding-top: 0; padding-bottom: 36px; }
+.footer-top .footer-column:last-child { display: flex; }
+.footer .brand-wordmark > span { font-size: 10px; color: #bcd5eb; }
+.footer .brand-wordmark strong { font-size: 27px; }
+.footer-brand p { font-size: 14px; color: #d1e1ee; }
+.footer-location { font-size: 12px; color: #c7dceb; }
+.footer-column h3 { font-size: 16px; color: #fff; }
+.footer-column > a { font-size: 14px; color: #c7dceb; }
+.footer-column > a:hover { color: #fff; }
+.footer-bottom { font-size: 12px; color: #b9d2e5; border-top-color: #ffffff26; padding-block: 22px; }
+.footer-bottom a { color: #b9d2e5; }
+.page-hero, .soft-section { background: #f0f5fa; }
+.page-hero .breadcrumb { color: #6c7c8c; }
+.eyebrow { font-size: 12px; }
+.button, .text-link { font-size: 14px; }
+.section-description { font-size: 16px; }
+.small-note, .source-note { font-size: 12px; }
+.back-to-top { background: #fff; border-color: #d7e3ee; color: #005aa6; }
+@media (max-width: 1100px) {
+  .container { padding-inline: 28px; }
+  .portal-motto strong { font-size: 19px; letter-spacing: 2px; }
+  .portal-motto span { letter-spacing: 1px; }
+  .header-inner { gap: 20px; }
+  .desktop-nav > a { font-size: 15px; }
+  .portal-news-layout, .portal-info-grid { gap: 30px; }
+  .portal-student-grid { gap: 14px; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .portal-student-score strong { margin-left: 6px; }
+  .portal-student-photo { aspect-ratio: 3/4; }
+  .portal-course { padding: 23px; }
+  .portal-course h3 { font-size: 20px; }
+  .portal-course-en { max-width: 135px; }
+  .portal-major-link { padding: 20px 12px; gap: 10px; }
+  .portal-major-link p { font-size: 12px; }
+}
+@media (max-width: 800px) {
+  .topbar { font-size: 12px; line-height: 30px; }
+  .topbar .container > span:last-child { display: none; }
+  .topbar .container { justify-content: flex-start; }
+  .header-inner { min-height: 84px; gap: 16px; }
+  .site-header .brand { gap: 12px; }
+  .site-header .brand-symbol { width: 49px; height: 49px; padding: 5px; }
+  .site-header .brand-symbol img { width: 39px; height: 39px; }
+  .site-header .brand-wordmark strong { font-size: 27px; letter-spacing: 3px; }
+  .site-header .brand-wordmark > span { font-size: 9px; letter-spacing: 1.5px; }
+  .portal-motto, .portal-nav-wrap, .header-contact { display: none; }
+  .mobile-menu-button { display: inline-flex; color: #fff; margin-left: auto; border: 1px solid #ffffff75; border-radius: 2px; width: 42px; height: 42px; }
+  .mobile-menu-button:hover { background: #ffffff20; }
+  .mobile-nav { display: grid; grid-template-columns: 1fr 1fr; padding: 12px 28px 20px; gap: 0 24px; background: #fff; border-top: 1px solid #dce6ef; max-height: 70vh; overflow: auto; }
+  .mobile-nav > a { color: #304f69; font-size: 16px; border-color: #dfe7ef; min-height: 48px; padding: 10px 3px; }
+  .mobile-nav > a.active { color: #005aa6; }
+  .portal-hero, .portal-hero-content { min-height: 465px; }
+  .portal-hero-image { width: 100%; object-position: 62% center; }
+  .portal-hero::after { background: linear-gradient(90deg,#073f70ed,#073f70bd 44%,#073f7030); }
+  .portal-hero h1 { font-size: 38px; }
+  .portal-hero-content { padding-block: 42px; }
+  .portal-news-layout, .portal-info-grid { grid-template-columns: 1fr; gap: 40px; }
+  .portal-focus-image { height: 320px; }
+  .portal-section { padding-block: 42px; }
+  .portal-heading h2 { font-size: 26px; }
+  .portal-course-grid { gap: 16px; }
+  .portal-course { padding: 23px 18px; }
+  .portal-course-top { align-items: flex-start; }
+  .portal-course-en { font-size: 10px; max-width: 100px; }
+  .portal-course h3 { font-size: 19px; }
+  .portal-course-description { font-size: 15px; }
+  .portal-info-grid { padding-top: 0; }
+  .portal-contact-copy h2 { font-size: 23px; }
+  .footer-top { gap: 30px; }
+  .footer-bottom { flex-wrap: wrap; gap: 12px; font-size: 12px; }
+}
+@media (max-width: 580px) {
+  .container { padding-inline: 20px; }
+  .topbar { letter-spacing: .3px; }
+  .portal-hero, .portal-hero-content { min-height: 455px; }
+  .portal-hero-image { object-position: 62% center; }
+  .portal-hero::after { background: linear-gradient(90deg,#073f70ed,#073f70c9 50%,#073f7070); }
+  .portal-kicker { font-size: 12px; letter-spacing: 1.5px; }
+  .portal-hero h1 { font-size: clamp(29px,7.5vw,38px); letter-spacing: 0; }
+  .portal-hero-description { font-size: 15px; line-height: 2; }
+  .portal-hero-actions { gap: 11px; }
+  .portal-button { padding: 10px 18px; font-size: 14px; }
+  .portal-shortcut-grid { grid-template-columns: repeat(3,minmax(0,1fr)); padding-block: 15px; row-gap: 12px; }
+  .portal-shortcut { font-size: 14px; gap: 7px; padding: 10px 0; }
+  .portal-shortcut:nth-child(3n) { border-right: 0; }
+  .portal-shortcut svg { width: 25px; height: 25px; }
+  .portal-section { padding-block: 34px; }
+  .portal-heading { margin-bottom: 21px; }
+  .portal-heading-title { gap: 10px; }
+  .portal-heading h2 { font-size: 24px; }
+  .portal-heading-en { font-size: 11px; letter-spacing: 1px; }
+  .portal-news-layout { gap: 36px; }
+  .portal-focus-image { height: 230px; }
+  .portal-focus-copy { padding: 20px; }
+  .portal-focus-copy h3 { font-size: 20px; }
+  .portal-policy-item { gap: 14px; grid-template-columns: 58px minmax(0,1fr); }
+  .portal-course-grid { grid-template-columns: 1fr; gap: 22px; }
+  .portal-course { padding: 24px; }
+  .portal-course-top { margin-bottom: 16px; align-items: center; }
+  .portal-course-en { max-width: none; font-size: 11px; }
+  .portal-course h3 { font-size: 22px; }
+  .portal-course-description { font-size: 16px; }
+  .portal-course-subjects { margin-top: 16px; }
+  .portal-student-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 19px 14px; }
+  .portal-student-info { padding: 13px 10px; }
+  .portal-student-info h3 { font-size: 18px; }
+  .portal-student-score { gap: 4px; }
+  .portal-student-score strong { margin-left: auto; font-size: 20px; }
+  .portal-info-grid { padding-top: 3px; gap: 33px; }
+  .portal-major-grid { gap: 13px; }
+  .portal-major-link { flex-direction: column; align-items: flex-start; gap: 12px; padding: 18px 14px; }
+  .portal-major-link h3 { font-size: 17px; }
+  .portal-major-link p { font-size: 12px; }
+  .portal-contact-inner { flex-direction: column; align-items: flex-start; gap: 24px; padding-block: 30px; }
+  .portal-contact-copy h2 { font-size: 23px; }
+  .portal-contact-address { font-size: 14px; align-items: flex-start; }
+  .portal-contact-address svg { margin-top: 4px; }
+  .footer { padding-top: 35px; }
+  .footer-top { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 20px; }
+  .footer-brand { grid-column: 1/-1; }
+  .footer-column { margin: 0; }
+  .footer-bottom { align-items: flex-start; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-focus-image img, .portal-course, .portal-student, .portal-button { transition: none; }
+  .portal-focus-feature:hover img, .portal-course:hover, .portal-student:hover { transform: none; }
+}
+
 </style>
 </head>
 <body>
@@ -15523,232 +15771,211 @@ strong { font-weight: 650; }
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "closing-decoration", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, {}) })
     ] }) });
   }
-  function HomePage() {
-    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "home-hero", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container hero-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-copy", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-kicker", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", {}),
-            "扎根南京 · 专注江苏职教高考"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("h1", { children: [
-            "让每一份努力，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "都有",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { className: "hero-emphasis", children: [
-              "向上的可能。",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("svg", { viewBox: "0 0 420 15", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("path", { d: "M3 10C112 2 275 2 416 8", fill: "none", stroke: "#e8aa72", strokeWidth: "5", strokeLinecap: "round" }) })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { className: "hero-description", children: [
-            "文化与技能并进，走好升学每一步。",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "以扎实的教学与用心的陪伴，让成长更有方向。"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-actions", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ButtonLink, { href: "/gaokao", children: "探索升学路径" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ButtonLink, { href: "/about", secondary: true, children: "了解宁跃" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-benefits", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CircleCheck, {}),
-              "分层教学"
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CircleCheck, {}),
-              "学情跟踪"
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CircleCheck, {}),
-              "家校协同"
-            ] })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-visual", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "hero-image", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("img", { src: assets.hero, alt: "书页化作向上的阶梯，两位青年走向青绿色拱门和温暖日光", width: "1536", height: "1024", fetchPriority: "high" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "hero-floating-note", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "float-icon", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(GraduationCap, { size: 24 }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("strong", { children: "学有所向，成长有路" }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "每一步积累，都在靠近理想" })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "hero-visual-caption", children: "A NEW CHAPTER, TOGETHER." }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "hero-star", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Sparkles, {}) })
-        ] })
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "facts-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container facts-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "fact", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(School, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("strong", { children: "南京本土" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "深耕江苏职教高考" })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "fact", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(MapPin, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("strong", { children: [
-              "3",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: " 大教学点" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "六合 · 铜山 · 麒麟" })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "fact", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(BookOpen, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("strong", { children: "文化 + 专业" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "基础与技能同步进阶" })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "fact", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(HeartHandshake, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("strong", { children: "全程陪伴" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "从学情跟踪到升学指导" })
-          ] })
-        ] })
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("section", { className: "section container home-paths", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(SectionHeading, { eyebrow: "LEARNING PATHWAYS · 学习方向", title: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
-          "找到方向，让努力",
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "serif-accent", children: "更有章法。" })
-        ] }), description: "从文化基础到专业实践，构建清晰、扎实的备考路径。", link: "/gaokao", linkText: "了解升学路径" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "path-grid", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/culture", className: "path-card path-green", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "path-card-top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-icon", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(BookOpen, {}) }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-index", children: "01" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "职教高考文化课" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { children: [
-              "语文、数学、英语分层教学，",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-              "从基础巩固到题型突破。"
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "subject-chips", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "语文" }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "数学" }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "英语" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "card-bottom", children: [
-              "夯实文化基础",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 20 })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/majors", className: "path-card path-peach", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "path-card-top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-icon", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Wrench, {}) }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-index", children: "02" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "专业理论与技能" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { children: [
-              "理论理解与实操训练相结合，",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-              "让专业知识真正落到手上。"
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "subject-chips", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "专业理论" }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "专业实操" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "card-bottom", children: [
-              "探索 16 个科目组",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 20 })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/study", className: "path-card path-blue", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "path-card-top", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-icon", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ClipboardCheck, {}) }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "path-index", children: "03" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: "中职学业水平测试" }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { children: [
-              "梳理公共基础与专业知识，",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-              "有计划地完成阶段备考。"
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "subject-chips", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "公共基础" }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "专业科目" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "card-bottom", children: [
-              "查看学测学习内容",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 20 })
-            ] })
-          ] })
-        ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "care-section", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container care-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "care-quote", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "eyebrow", children: "GROW WITH NINGYUE" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("h2", { children: [
-            "把每一天的认真，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "变成看得见的",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: "成长。" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { children: [
-            "教育，是知识的积累，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "也是学习习惯与自信的建立。"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "care-line" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "care-signature", children: "宁跃教育 · 教学与陪伴" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(BookOpen, { className: "care-watermark", "aria-hidden": "true" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "care-content", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "eyebrow", children: "WHY NINGYUE · 我们如何陪伴" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("h2", { children: [
-            "用心教，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "也认真关注每一步。"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "care-reasons", children: [{ icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Layers, {}), title: "尊重基础，分层教学", text: "基础补差、巩固提升与冲刺训练，让不同起点的学生都有清晰目标。" }, { icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NotebookPen, {}), title: "关注过程，持续反馈", text: "日常学情记录、每周测试与每月统考，把问题发现和改进落到平时。" }, { icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Users, {}), title: "家校同心，成长同行", text: "教学老师与班主任分工协作，通过家校反馈一起关注学生状态。" }].map((item) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "care-reason", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: item.icon }),
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: item.title }),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: item.text })
-            ] })
-          ] }, item.title)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { className: "text-link", href: "/management", children: [
-            "看看在宁跃的一天",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 17 })
-          ] })
-        ] })
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("section", { className: "section container majors-home", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(SectionHeading, { eyebrow: "FIND YOUR DIRECTION · 专业探索", title: "不同的热爱，都有前进的方向。", description: "从专业内容与学习特点出发，认识自己的升学方向。", link: "/majors", linkText: "查看全部专业科目组" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "major-shortcuts", children: [{ code: "15", title: "计算机应用", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Monitor, {}), sub: "信息技术 · 数字世界" }, { code: "19", title: "市场营销", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Landmark, {}), sub: "商业思维 · 营销实践" }, { code: "18", title: "财会", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NotebookPen, {}), sub: "账务基础 · 财税知识" }, { code: "23", title: "汽车", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Wrench, {}), sub: "汽车构造 · 维修技能" }, { code: "21", title: "艺术", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Palette, {}), sub: "艺术表达 · 专业训练" }, { code: "20", title: "旅游管理", icon: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Compass, {}), sub: "服务礼仪 · 旅游实践" }].map((item) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { className: "major-shortcut", href: "/majors?major=" + item.code, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { children: item.icon }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h3", { children: item.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: item.sub }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 16 })
-        ] }, item.code)) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "policy-home", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container policy-home-grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "eyebrow", children: "POLICY & GUIDANCE" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("h2", { children: [
-            "了解政策，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "安心准备下一步。"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { children: [
-            "关注考试安排与报考要求，",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
-            "重要信息，查看官方原文。"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/gaokao#policies", className: "text-link", children: [
-            "更多政策资讯",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 17 })
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(PolicyList, { compact: true })
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ClosingBanner, {})
-    ] });
+  var portalH = import_react4.default.createElement;
+
+  function PortalHeading(title, english, href) {
+    return portalH("div", { className: "portal-heading" },
+      portalH("div", { className: "portal-heading-title" },
+        portalH("h2", null, title),
+        portalH("span", { className: "portal-heading-en", "aria-hidden": "true" }, english)
+      ),
+      href ? portalH(OfflineLink, { className: "portal-more", href: href, "aria-label": "更多" + title }, "更多") : null
+    );
   }
+
+  function HomePage() {
+    var shortcuts = [
+      { title: "职教高考", href: "/gaokao", icon: GraduationCap },
+      { title: "文化科目", href: "/culture", icon: BookOpen },
+      { title: "专业科目组", href: "/majors", icon: Wrench },
+      { title: "学业水平测试", href: "/study", icon: ClipboardCheck },
+      { title: "学生管理", href: "/management", icon: Users },
+      { title: "录取情况", href: "/admissions", icon: School }
+    ];
+    var courses = [
+      { title: "职教高考文化课", english: "GENERAL EDUCATION", href: "/culture", icon: BookOpen, text: "语文、数学、英语分层教学，从基础巩固到题型突破。", subjects: "语文 · 数学 · 英语", action: "了解文化课" },
+      { title: "专业理论与技能", english: "PROFESSIONAL LEARNING", href: "/majors", icon: Wrench, text: "理论理解与实操训练相结合，让专业知识真正落到手上。", subjects: "专业理论 · 专业实操", action: "探索专业科目组" },
+      { title: "中职学业水平测试", english: "ACADEMIC PROFICIENCY", href: "/study", icon: ClipboardCheck, text: "梳理公共基础与专业知识，有计划地完成阶段备考。", subjects: "公共基础 · 专业科目", action: "查看学测学习内容" }
+    ];
+    var featuredMajors = [
+      { code: "15", title: "计算机应用", icon: Monitor, description: "信息技术 · 数字世界" },
+      { code: "19", title: "市场营销", icon: Landmark, description: "商业思维 · 营销实践" },
+      { code: "18", title: "财会", icon: NotebookPen, description: "账务基础 · 财税知识" },
+      { code: "23", title: "汽车", icon: Wrench, description: "汽车构造 · 维修技能" },
+      { code: "21", title: "艺术", icon: Palette, description: "艺术表达 · 专业训练" },
+      { code: "20", title: "旅游管理", icon: Compass, description: "服务礼仪 · 旅游实践" }
+    ];
+
+    return portalH(import_react4.default.Fragment, null,
+      portalH("section", { className: "portal-hero", "aria-label": "宁跃教育" },
+        portalH("img", {
+          className: "portal-hero-image", src: assets.hero,
+          alt: "书页化作向上的阶梯，两位青年走向青绿色拱门和温暖日光",
+          width: 1536, height: 1024, fetchPriority: "high"
+        }),
+        portalH("div", { className: "container portal-hero-content" },
+          portalH("p", { className: "portal-kicker" }, "扎根南京 · 专注江苏职教高考"),
+          portalH("h1", null, "让每一份努力，", portalH("br"), portalH("span", null, "都有向上的可能。")),
+          portalH("p", { className: "portal-hero-description" },
+            "文化与技能并进，走好升学每一步。", portalH("br"),
+            "以扎实的教学与用心的陪伴，让成长更有方向。"
+          ),
+          portalH("div", { className: "portal-hero-actions" },
+            portalH(OfflineLink, { className: "portal-button", href: "/gaokao" }, "探索升学路径"),
+            portalH(OfflineLink, { className: "portal-button portal-button-outline", href: "/about" }, "了解宁跃")
+          )
+        )
+      ),
+
+      portalH("nav", { className: "portal-shortcuts", "aria-label": "常用入口" },
+        portalH("div", { className: "container portal-shortcut-grid" },
+          shortcuts.map(function(item) {
+            return portalH(OfflineLink, { className: "portal-shortcut", href: item.href, key: item.href },
+              portalH(item.icon, { "aria-hidden": "true" }),
+              portalH("span", null, item.title)
+            );
+          })
+        )
+      ),
+
+      portalH("section", { className: "portal-section container" },
+        portalH("div", { className: "portal-news-layout" },
+          portalH("article", { className: "portal-focus" },
+            PortalHeading("宁跃聚焦", "FOCUS", "/about"),
+            portalH(OfflineLink, { className: "portal-focus-feature", href: "/about" },
+              portalH("div", { className: "portal-focus-image" },
+                portalH("img", {
+                  src: assets.hero, alt: "书页与阶梯构成的成长之路", width: 1536, height: 1024,
+                  loading: "lazy", decoding: "async"
+                }),
+                portalH("span", { className: "portal-focus-caption" }, "宁跃教育 · 教学与陪伴")
+              ),
+              portalH("div", { className: "portal-focus-copy" },
+                portalH("h3", null, "文化与技能并进，走好升学每一步。"),
+                portalH("p", null, "宁跃教育是一家扎根南京、专注江苏省中职职教高考文化课与专业技能辅导的本土培训机构，服务南京及周边中职学生。"),
+                portalH("p", { className: "portal-focus-summary" }, "分层教学 · 学情跟踪 · 家校协同")
+              )
+            )
+          ),
+          portalH("aside", { className: "portal-notices", "aria-label": "政策资讯" },
+            PortalHeading("政策资讯", "POLICY", "/gaokao#policies"),
+            portalH("ul", { className: "portal-policy-list" },
+              policyLinks.map(function(item) {
+                return portalH("li", { key: item.url },
+                  portalH("a", { className: "portal-policy-item", href: item.url, target: "_blank", rel: "noopener noreferrer" },
+                    portalH("time", { className: "portal-policy-date", dateTime: item.date },
+                      portalH("strong", null, item.date.slice(8)),
+                      portalH("span", null, item.date.slice(0, 7).replace("-", "."))
+                    ),
+                    portalH("div", { className: "portal-policy-copy" },
+                      portalH("span", { className: "portal-policy-category" }, item.category),
+                      portalH("h3", null, item.title),
+                      portalH("span", { className: "portal-policy-source" }, "官方原文 · " + (item.url.includes("jyt.") ? "江苏省教育厅" : "江苏省教育考试院"))
+                    )
+                  )
+                );
+              })
+            ),
+            portalH("p", { className: "portal-policy-note" }, "报考要求与考试安排，以报考年度官方公告为准。")
+          )
+        )
+      ),
+
+      portalH("section", { className: "portal-teaching portal-section" },
+        portalH("div", { className: "container" },
+          PortalHeading("教育教学", "EDUCATION", "/gaokao"),
+          portalH("div", { className: "portal-course-grid" },
+            courses.map(function(item) {
+              return portalH(OfflineLink, { className: "portal-course", href: item.href, key: item.href },
+                portalH("div", { className: "portal-course-top" },
+                  portalH(item.icon, { "aria-hidden": "true" }),
+                  portalH("span", { className: "portal-course-en", "aria-hidden": "true" }, item.english)
+                ),
+                portalH("h3", null, item.title),
+                portalH("p", { className: "portal-course-description" }, item.text),
+                portalH("p", { className: "portal-course-subjects" }, item.subjects),
+                portalH("span", { className: "portal-course-action" }, item.action)
+              );
+            })
+          )
+        )
+      ),
+
+      portalH("section", { className: "portal-students portal-section container" },
+        PortalHeading("学子风采", "STUDENTS", "/admissions"),
+        portalH("p", { className: "portal-section-intro" }, "以努力开启新的求学旅程。录取院校：扬州职业技术大学。"),
+        portalH("div", { className: "portal-student-grid" },
+          data.admissions.map(function(student) {
+            return portalH(OfflineLink, {
+              className: "portal-student", href: "/admissions", key: student.id,
+              "aria-label": student.name + "，职教高考" + student.score + "分，查看录取情况"
+            },
+              portalH("div", { className: "portal-student-photo" },
+                portalH("img", {
+                  src: assets[student.photo], alt: student.name + "同学照片", loading: "lazy", decoding: "async",
+                  width: student.portrait.width, height: student.portrait.height,
+                  style: {
+                    width: student.portrait.width / student.portrait.cropWidth * 100 + "%",
+                    left: -student.portrait.x / student.portrait.cropWidth * 100 + "%",
+                    top: -student.portrait.y / (student.portrait.cropWidth * 4 / 3) * 100 + "%"
+                  }
+                })
+              ),
+              portalH("div", { className: "portal-student-info" },
+                portalH("h3", null, student.name),
+                portalH("p", { className: "portal-student-score" },
+                  portalH("span", null, "职教高考"),
+                  portalH("strong", null, student.score),
+                  portalH("span", null, "分")
+                )
+              )
+            );
+          })
+        )
+      ),
+
+      portalH("section", { className: "portal-info-grid container portal-section" },
+        portalH("div", { className: "portal-management" },
+          PortalHeading("学生管理", "STUDENT LIFE", "/management"),
+          portalH("div", { className: "portal-management-list" },
+            managementItems.slice(0, 3).map(function(item) {
+              return portalH(OfflineLink, { className: "portal-management-item", href: "/management", key: item.title },
+                portalH("h3", null, item.title),
+                portalH("p", null, item.description)
+              );
+            })
+          )
+        ),
+        portalH("div", { className: "portal-major-explore" },
+          PortalHeading("专业探索", "EXPLORE MAJORS", "/majors"),
+          portalH("div", { className: "portal-major-grid" },
+            featuredMajors.map(function(item) {
+              return portalH(OfflineLink, { className: "portal-major-link", href: "/majors?major=" + item.code, key: item.code },
+                portalH(item.icon, { "aria-hidden": "true" }),
+                portalH("div", null,
+                  portalH("h3", null, item.title),
+                  portalH("p", null, item.description)
+                )
+              );
+            })
+          )
+        )
+      ),
+
+      portalH("section", { className: "portal-contact-band" },
+        portalH("div", { className: "container portal-contact-inner" },
+          portalH("div", { className: "portal-contact-copy" },
+            portalH("p", { className: "portal-contact-label" }, "校区与咨询"),
+            portalH("h2", null, "走近宁跃，开启下一段成长。"),
+            portalH("p", { className: "portal-contact-address" }, portalH(MapPin, { "aria-hidden": "true" }), ADDRESS),
+            portalH("p", { className: "portal-contact-campuses" }, "教学点：六合 · 铜山 · 麒麟")
+          ),
+          portalH(OfflineLink, { className: "portal-button portal-contact-link", href: "/contact" }, "了解校区与咨询")
+        )
+      )
+    );
+  }
+
   function AboutPage() {
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(PageHero, { label: "机构简介", title: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
@@ -16395,27 +16622,35 @@ strong { font-weight: 650; }
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 12 })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("header", { className: "site-header", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "container header-inner", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Brand, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("nav", { className: "desktop-nav", "aria-label": "主导航", children: navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(OfflineLink, { href: hrefFor(item.page), className: page === item.page ? "active" : "", "aria-current": page === item.page ? "page" : void 0, children: item.title }, item.page)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/contact", className: "header-contact", children: [
-            "校区与咨询",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 15 })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("button", { className: "mobile-menu-button icon-button", "aria-label": menuOpen ? "关闭导航" : "打开导航", "aria-expanded": menuOpen, "aria-controls": "mobile-navigation", onClick: () => setMenuOpen(!menuOpen), children: menuOpen ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(X, {}) : /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Menu, {}) })
-        ] }),
-        menuOpen && /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "mobile-nav", id: "mobile-navigation", "aria-label": "移动端导航", children: [
-          navItems.map((item) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: hrefFor(item.page), onClick: () => setMenuOpen(false), className: page === item.page ? "active" : "", children: [
-            item.title,
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ChevronRight, { size: 16 })
-          ] }, item.page)),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(OfflineLink, { href: "/contact", onClick: () => setMenuOpen(false), children: [
-            "校区与咨询",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ArrowUpRight, { size: 16 })
-          ] })
-        ] })
-      ] }),
+      portalH("header", { className: "site-header" },
+        portalH("div", { className: "container header-inner" },
+          portalH(Brand, { light: true }),
+          portalH("div", { className: "portal-motto" },
+            portalH("strong", null, "务实教学 · 用心陪伴"),
+            portalH("span", null, "让每一份努力，都有向上的可能。")
+          ),
+          portalH(OfflineLink, { href: "/contact", className: "header-contact" }, "校区与咨询"),
+          portalH("button", {
+            className: "mobile-menu-button icon-button", "aria-label": menuOpen ? "关闭导航" : "打开导航",
+            "aria-expanded": menuOpen, "aria-controls": "mobile-navigation", onClick: () => setMenuOpen(!menuOpen)
+          }, portalH(menuOpen ? X : Menu, { "aria-hidden": "true" }))
+        ),
+        portalH("div", { className: "portal-nav-wrap" },
+          portalH("nav", { className: "container desktop-nav", "aria-label": "主导航" },
+            navItems.map((item) => portalH(OfflineLink, {
+              key: item.page, href: hrefFor(item.page), className: page === item.page ? "active" : "",
+              "aria-current": page === item.page ? "page" : undefined
+            }, item.title))
+          )
+        ),
+        menuOpen && portalH("nav", { className: "mobile-nav", id: "mobile-navigation", "aria-label": "移动端导航" },
+          navItems.map((item) => portalH(OfflineLink, {
+            key: item.page, href: hrefFor(item.page), onClick: () => setMenuOpen(false),
+            className: page === item.page ? "active" : "", "aria-current": page === item.page ? "page" : undefined
+          }, item.title)),
+          portalH(OfflineLink, { href: "/contact", onClick: () => setMenuOpen(false) }, "校区与咨询")
+        )
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("main", { id: "main-content", children: [
         page === "home" && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(HomePage, {}),
         page === "about" && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(AboutPage, {}),
